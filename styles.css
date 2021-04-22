@@ -1,0 +1,252 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #eee;
+}
+
+header {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  height: 10vh;
+  align-items: center;
+}
+.logo-container img {
+  width: 15vh;
+  margin-top: 8vh;
+  margin-left: 2vh;
+  box-shadow: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.25),
+    0.125em 0.125em 0.25em rgba(0, 0, 0, 0.15);
+  padding-bottom: 0.2mm;
+  margin-left: 3.5em;
+}
+
+.logo {
+  margin-left: 10em;
+}
+
+.presentation {
+  display: flex;
+  width: 90%;
+  margin: auto;
+  min-height: 80vh;
+  align-items: center;
+}
+
+.introduction {
+  flex: 1;
+}
+
+.intro-text h1 {
+  font-size: 34px;
+  font-weight: 500;
+
+  margin-right: 0em;
+  text-align: center;
+}
+
+.intro-text p {
+  margin-top: 5px;
+  font-size: 18px;
+  color: #585772;
+}
+
+.cover {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.cover img {
+  height: 45vh;
+  margin-left: 2em;
+  filter: drop-shadow(0px 5px 3px);
+}
+
+.cover img:hover {
+  opacity: 0.8;
+}
+
+.body-text {
+  margin-left: 15em;
+  margin-right: 15em;
+}
+img {
+  animation: drop 1.5s ease;
+}
+
+.images {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height: 100vh;
+  margin: 0 3em;
+  padding-left: 5em;
+  padding-right: 5em;
+}
+
+footer {
+  position: absolute;
+  margin-left: 8em;
+  margin-right: 5em;
+}
+
+.container-images {
+  /* display: inline-flex; */
+  margin: 0 5em;
+}
+
+.swing {
+  animation: swing ease-in-out 2s infinite alternate;
+  transform-origin: center -20px;
+  float: left;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  display: flex;
+  margin-right: 1.8em;
+  margin-top: 3em;
+  margin-left: 2.8em;
+}
+
+.swing::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #999;
+  top: -10px;
+  left: 50%;
+  border-bottom: none;
+  border-right: none;
+  transform: rotate(45deg);
+}
+
+.swing::before {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  top: -14px;
+  left: 54%;
+  border-radius: 50% 50%;
+  background: #000;
+}
+.swing img {
+  border: 5px solid #f8f8f8;
+  display: block;
+}
+
+.card {
+  transform: translate(-50%, -50%);
+  transform-style: preserve-3d;
+  perspective: 600px;
+  transition: 0.5s;
+}
+
+.card:hover .card-front {
+  transform: rotateX(-180deg);
+  opacity: 0;
+}
+
+.card:hover .card-back {
+  transform: rotateX(0deg);
+}
+
+.card-front {
+  backface-visibility: hidden;
+  transition: 0.5s;
+  cursor: pointer;
+  backface-visibility: hidden;
+  transform: rotateX(0deg);
+  transition: 0.5s;
+  text-align: center;
+}
+
+.card-back {
+  backface-visibility: hidden;
+  transform: rotateX(180deg);
+  transition: 0.5s;
+  position: absolute;
+  text-align: center;
+}
+
+footer h4 {
+  margin-left: 4.5em;
+}
+@keyframes drop {
+  0% {
+    opacity: 0;
+    transform: translateY(-80px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes swing {
+  0% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(-10deg);
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .presentation {
+    flex-direction: column;
+  }
+  .logo {
+    margin-left: 6.8em;
+  }
+
+  .introduction {
+    margin-top: 5vh;
+    text-align: right;
+  }
+
+  .intro-text h1 {
+    font-size: 34px;
+    margin-top: 2em;
+  }
+
+  .intro-text p {
+    text-align: center;
+    font-size: 20px;
+  }
+
+  .cover img {
+    margin-top: 2em;
+    margin-left: 1em;
+    margin-right: 1em;
+    width: 85%;
+  }
+
+  .swing {
+    margin-top: 5.5em;
+    margin-left: 2.5em;
+  }
+
+  .body-text {
+    margin-left: 2.5em;
+    margin-right: 2em;
+    text-align: center;
+  }
+
+  footer h4 {
+    margin-left: 0em;
+  }
+}
+@media screen and (max-width: 500px) {
+  .swing {
+    margin-top: 2.5em;
+    margin-left: 1em;
+  }
+  #nelson {
+    margin-top: 10em;
+  }
+}
